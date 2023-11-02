@@ -1,0 +1,184 @@
+'''
+Assignment:
+Q1 what is the positional ,keyword ,default,var len args
+Answer-
+positional Argument:-
+Positional arguments are the arguments that are passed
+to a function or method in a specific order.
+The order in which you pass these arguments matters,
+because the function or method will use
+the arguments in the order that they are received.
+For example, if you have a function that takes two arguments,
+the first argument will be used as the first parameter, and
+the second argument will be used as the second parameter.
+
+Keyword Argument:-
+Keyword arguments are arguments that are passed to a function or
+method using the name of the argument followed by an equal sign and
+the value of the argument. These arguments do not need to be passed in a
+specific order, because the function or method will use the names of
+the arguments to determine which values to use for which parameters.
+
+Default Argument:-
+Default arguments are arguments that are given a default value when
+the function or method is defined. These arguments are optional,
+because the function or method will use the default value
+if no value is provided for that argument when the function is called.
+Default arguments can be used to provide default values for optional parameters,
+or to specify default behavior for a function or method.
+Python allows us to create functions with parameters that have default values.
+
+The default values are passed to the parameters when the function is invoked
+without the arguments.
+
+Positional vs keyword arguments :-
+        positional                                            keyword
+parameter names are used tom pass              arguments are passed in the order of
+argument during the function call.             parameter.the order defined in the
+                                               order function declaration
+order of parameter names can be changed        order of value cannot be changed to avoid
+to pass the arguments.                         the unexpected output.
+
+syntax:-                                         syntax:-
+functionName (kumarName= value)               functionName(value1,value2,value3)
+
+Q3 what is *args and **kwargs
+**kwarg:-
+The special syntax **kwargs in function
+definitions in Python is used to pass a
+keyworded, variable-length argument list.
+We use the name kwargs with the double star
+*args:-
+The special syntax *args in function
+definitions in Python is used to pass
+a variable number of arguments to a function.
+It is used to pass a non-keyworded,
+variable-length argument list.
+
+Q4 what is *args and **kwargs
+         *args                                          **kwargs
+variable length positional arguments            variable length positional arguments
+it gives tupple                                 it is a mutable
+it is immutabl                                  it gives dictionary
+
+#Q5 Solve 2 examples each
+#1. Positional Arguments: order of arguments matter/
+#Sequence order matters
+
+def display(Name,age,salary):
+    print('name:',Name)
+    print('Age:',age)
+    print('salary:',salary)
+
+display('kumar',28,40000)
+#Q2
+def display(Name,adhar,Address):
+    print('Name:',Name)
+    print('Adhar:',adhar)
+    print('Address:',Address)
+
+display('kumar',6201_4201_3021,'at+post- mafo,district-sheikhpura(bihar),taluka-ghatksumbha,pincode-811102')
+
+#1. Keyword arguments: position/sequence order doesnt matter in this case
+def display(name,age,salary):
+    print('Name:',name)
+    print('Age:', age)
+    print('Salary:', salary)
+
+display(salary=60000,age=28,name='kumar')
+
+#2
+def display(Name,adhar,Address):
+    print('Name:',Name)
+    print('Adhar:',adhar)
+    print('Address:',Address)
+
+display(Name='kumar',Address='at+post- mafo,district-sheikhpura(bihar),taluka-ghatksumbha,pincode-811102',adhar=6201_4201_3021)
+
+#3if we provide a new value then it will take the supplied value
+#instead of default
+#It is an argument along with value in a declaration
+
+def os(user='guest'):
+    print('Welcome',user)
+os()
+os('kumar')
+
+#2
+def os(admin='guest'):
+    print('Welcome',admin)
+os()
+os('kumar')
+
+#can we add positional + default args--> YES
+#1
+def test(x,y,z=400):
+    print('X:',x)
+    print('Y:', y)
+    print('Z:', z)
+test(20,30)
+test(200,300,400)
+
+#2
+def test(x,y,z=700):
+    print('X:',x)
+    print('Y:', y)
+    print('Z:', z)
+test(40,60)
+test(200,300,400)
+
+#4. Variable length args: used to supply n number of values
+agr can accept multiple value or None
+
+#using * as a prefix we can make a normal arg as var. length arg
+
+#1
+def addition(*n):
+    print(n)
+addition(32)
+addition(5,6,3)
+addition(10,6.5,38,67)
+addition()
+
+#2
+def addition(*n):
+    print(n)
+addition(64)
+addition(7,8,9)
+addition(15,7.5,65,78)
+addition()
+
+#1
+def info(*args):
+    print(args)
+info()
+info('PVR',44)
+info('LUV',33,46000,421987)
+
+#2
+def info(*args):
+    print(args)
+info()
+info('PVR',66)
+info('LUV',36,47000,421945)
+
+# Variable length positional arguments: *args
+# Variable length keyword arguments: **kwargs
+#1
+def info(**kwargs):
+    print(kwargs)
+# in calling we must have to supply keyword args
+info(a=5,b=6,c=7)
+info(name='Kumar',age=34,place='India')
+info()
+
+#2
+def info(**kwargs):
+    print(kwargs)
+info(d=25,e=26,f=27)
+info(name='shyam',age=36,place='India')
+info()
+
+'''
+
+
