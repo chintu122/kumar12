@@ -1,0 +1,79 @@
+'''
+#to check 4 different types of arguments example
+#in lambda and test
+k = lambda p,q,r:p+q+r
+print(k(30,40,50))
+
+#
+m = lambda p,q,r:(p+q,q+r)
+print(m(30,40,50))
+#
+m= lambda p,q,r:(p+q,r)
+print(m(30,40,50))
+#
+m=lambda p,q,r:(p+r,q)
+print(m(30,40,50))
+
+# Assignemnt: Solve 3 problems using if else n lambda
+m = lambda num:'+ve' if num>0 else'-ve'
+print(m(-45))
+
+#for even or odd number
+m = lambda num:'even' if num%2==0 else'odd'
+print(m(2))
+
+#Example of lambda function using if-else
+Max = lambda a, b : a if(a > b) else b
+
+print(Max(1, 2))
+
+#
+names = ['kumar','shyam','mohan']
+def convert(nm):
+    return nm.title()
+cn = lambda nm:nm.upper()
+print(list(map(convert,names)))
+print(list(map(cn,names)))
+
+#
+company = ['the cape of good hope']
+def convert(cm):
+    return cm.title()
+pq = lambda cm:cm.upper()
+print(list(map(convert,company)))
+print(list(map(pq,company)))
+
+#--------------------------------------------------
+salary = [45000,30000,28000,37000]
+#Calculate a salary with bonus 5%
+bonus = lambda sal:sal + sal*.05
+print(list(map(bonus,salary)))
+
+#
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+
+final_list = list(filter(lambda x: (x % 2 != 0), li))
+print(final_list)
+
+#
+Python code to illustrate
+# map() with lambda()
+# to get double of a list.
+li = [5, 7, 22, 97, 54, 62, 77, 23, 73, 61]
+
+final_list = list(map(lambda x: x * 2, li))
+print(final_list)
+#
+# Python program to demonstrate
+# use of lambda() function
+# with map() function
+animals = ['dog', 'cat', 'parrot', 'rabbit']
+ 
+# here we intend to change all animal names
+# to upper case and return the same
+uppered_animals = list(map(lambda animal: animal.upper(), animals))
+ 
+print(uppered_animals)
+'''
+
+
